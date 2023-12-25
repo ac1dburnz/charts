@@ -55,21 +55,21 @@ service:
   rthealth:
     enabled: true
     ports:
-      rtinc:
+      rthealth:
         enabled: true
         port: 8001
         
   phphealth:
     enabled: true
     ports:
-      rtinc:
+      phphealth:
         enabled: true
         port: 8081
         
   webdavhealth:
     enabled: true
     ports:
-      rtinc:
+      webdavhealth:
         enabled: true
         port: 9001
         
