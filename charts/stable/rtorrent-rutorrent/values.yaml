@@ -81,11 +81,11 @@ workload:
         main:
           probes:
             liveness:
-              path: "http://127.0.0.1:8081/ping"
+              path: "/usr/local/bin/healthcheck"
             readiness:
-              path: "http://127.0.0.1:8081/ping"
+              path: "/usr/local/bin/healthcheck"
             startup:
-              path: "http://127.0.0.1:8081/ping"
+              path: "/usr/local/bin/healthcheck"
           env:
             RUTORRENT_PORT: "{{ .Values.service.main.ports.main.port }}"
             PORT_RTORRENT: "{{ .Values.service.rtorrent.ports.rtorrent.port }}"
