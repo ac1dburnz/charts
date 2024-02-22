@@ -106,6 +106,16 @@ persistence:
   config:
     enabled: true
     mountPath: "/config"
+metrics:
+  main:
+    enabled: true
+    type: "servicemonitor"
+    endpoints:
+      - port: metrics
+        path: /metrics
+    targetSelector: metrics
+    prometheusRule:
+      enabled: false
 portal:
   open:
     enabled: true
